@@ -1,6 +1,6 @@
 # 💱 CurrencyFlow – Dashboard & Conversor de Moedas
 
-Aplicação front-end desenvolvida em **React + Vite + Tailwind CSS**, com um **Dashboard moderno em modo escuro fixo** e um **Conversor Interativo** usando taxas reais via [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas).
+Aplicação front-end desenvolvida em **React + Vite + Tailwind CSS**, com um **Dashboard moderno em modo escuro** e um **Conversor Interativo** usando taxas reais via [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas).
 
 ---
 
