@@ -1,33 +1,41 @@
-# 💱 Dashboard & Conversor de Moedas
+# 💱 CurrencyFlow – Dashboard & Conversor de Moedas
 
-Aplicação front-end em React + Vite + Tailwind CSS com:
-
-- **Dashboard de Cotações** em tempo real para pares **USD, EUR, GBP, JPY, AUD, CAD** (base BRL), consumindo a [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas).
-- **Conversor Interativo** entre moedas (inclui BRL, USD, EUR, GBP, JPY, AUD, CAD) com taxas fictícias, para demonstração.
-- Animações suaves de entrada e hover via **Framer Motion**.
-- Layout responsivo e moderno, com cores personalizadas em **Tailwind**.
+Aplicação front-end desenvolvida em **React + Vite + Tailwind CSS**, com um **Dashboard moderno em modo escuro fixo** e um **Conversor Interativo** usando taxas reais via [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas).
 
 ---
 
-## 🚀 Tecnologias
-
-- **React 18**  
-- **Vite** (dev server ultrarrápido)  
-- **Tailwind CSS** (estilização utilitária)  
-- **Framer Motion** (animações)  
-- **Fetch API** (cotações em tempo real)  
-- **AwesomeAPI** (fonte de dados de câmbio)
+## ✨ **Funcionalidades**
+- **Dashboard de Cotações**:
+  - Mostra valores em tempo real para **USD, EUR, GBP, JPY, AUD, CAD** (base BRL).
+  - Variação 24h com cores dinâmicas (verde/vermelho).
+  - Mini-gráficos de tendência com **Recharts**.
+- **Conversor Interativo**:
+  - Conversão usando valores reais da AwesomeAPI.
+  - Formatação monetária automática.
+  - UI moderna, responsiva e em **Dark Mode**.
+- **Interface elegante e responsiva**:
+  - Desenvolvida com **Tailwind CSS**.
+  - Animações suaves via **Framer Motion**.
 
 ---
 
-## 📁 Estrutura
+## 🚀 **Tecnologias Utilizadas**
+- **React 18**
+- **Vite** (dev server rápido)
+- **Tailwind CSS** (estilização utilitária)
+- **Framer Motion** (animações)
+- **Axios** (consumo da API)
+- **Recharts** (gráficos)
+- **AwesomeAPI** (cotações em tempo real)
 
+---
+
+## 📂 **Estrutura do Projeto**
 ```
-pretty-currency-dashboard-v2/
+currency-dashboard-v3-darkmode/
 ├─ index.html
 ├─ package.json
 ├─ tailwind.config.js
-├─ postcss.config.js
 ├─ vite.config.js
 └─ src/
    ├─ main.jsx
@@ -41,43 +49,54 @@ pretty-currency-dashboard-v2/
 
 ---
 
-## ⚙️ Instalação e Execução
-
-1. Clone ou baixe este repositório.  
-2. No terminal, dentro da pasta raiz, execute:
+## ⚙️ **Instalação e Execução**
+1. **Clone ou baixe** este repositório.
+2. No terminal, acesse a pasta do projeto:
+   ```bash
+   cd currency-dashboard-v3-darkmode
+   ```
+3. Instale as dependências:
    ```bash
    npm install
+   npm install recharts
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
    npm run dev
    ```
-3. Abra no navegador: `http://localhost:5173`
+5. Abra no navegador:
+   ```
+   http://localhost:5173
+   ```
 
 ---
 
-## 🔍 Como Funciona
+## 🔍 **Como Funciona**
+### **Dashboard**
+- Busca cotações reais via **AwesomeAPI**.
+- Exibe **valor atual em R$**, variação percentual e mini-gráficos.
 
-1. **Dashboard**  
-   - Ao carregar, busca as cotações BRL→moeda (USD, EUR, …)  
-   - Inverte a taxa para mostrar “1 unidade da moeda em R$”  
-   - Exibe valor e variação 24h (`pctChange`) colorida (verde/vermelho).
-
-2. **Conversor**  
-   - Insira um valor, escolha “De” e “Para”  
-   - Taxas fictícias definidas em código para demonstração  
-   - Resultado exibido em tempo real abaixo do botão.
-
-3. **Sobre**  
-   - O Currency Dashboard foi criado para demonstrar de forma prática e visual o consumo de APIs de cotações em tempo real, aliado a um conversor interativo de moedas. O foco é em moedas fiduciárias (BRL, USD, EUR, GBP, JPY, AUD e CAD), exibindo valores atualizados e variação 24h diretamente da AwesomeAPI.
-
-Tecnologias: React 18, Vite, Tailwind CSS e Framer Motion – escolhidas por sua performance, flexibilidade e facilidade de criar interfaces fluídas.
+### **Conversor**
+- Permite converter entre **BRL, USD, EUR, GBP, JPY, AUD e CAD**.
+- Usa valores reais da API.
+- Formata automaticamente o resultado no padrão da moeda de destino.
 
 ---
 
-## 🛠️ Personalização
-
-- **Novos pares**: edite o array `PAIRS` em `Dashboard.jsx` ou o array `moedas` em `Converter.jsx`.  
-- **Estilos**: ajuste cores em `tailwind.config.js`.  
-- **API real**: troque o endpoint em `Dashboard.jsx` por outra fonte (ex: ExchangeRate.host).
-
-Este projeto foi feito para aprendizado e portfólio; melhorias são bem-vindas!
+## 🛠️ **Personalização**
+- Para adicionar mais moedas, edite os arrays:
+  - `PAIRS` em **Dashboard.jsx**
+  - `CURRENCIES` em **Converter.jsx**
+- Para alterar cores, personalize o arquivo **tailwind.config.js**.
 
 ---
+
+## 📌 **Próximas Melhorias**
+- Adicionar **bandeiras das moedas**.
+- Histórico de cotações com gráficos detalhados.
+- Deploy automático via **Vercel** ou **Netlify**.
+
+---
+
+## 📄 **Licença**
+Este projeto é livre para uso educacional e pessoal. Melhorias são bem-vindas!
